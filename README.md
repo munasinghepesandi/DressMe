@@ -27,7 +27,7 @@ This repository contains:
 - bcrypt for password hashing
 
 
-##Output Images
+<h2>Output Images</h2>
 
 <img src="./OutputImg/img1.png"/>
 <img src="./OutputImg/img2.png"/>
