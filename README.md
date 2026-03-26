@@ -1,7 +1,7 @@
 
 # DressMe
 
-DressMe is a full-stack fashion web application Home page with a React + Vite frontend and an Express + MongoDB backend.
+DressMe is a full-stack fashion simple web application Home page with a React + Vite frontend and an Express + MongoDB backend.
 
 ## Project Overview
 
@@ -25,6 +25,15 @@ This repository contains:
 - MongoDB + Mongoose
 - JWT authentication
 - bcrypt for password hashing
+
+
+##Output Images
+
+<img src="./OutputImg/img1.png"/>
+<img src="./OutputImg/img2.png"/>
+<img src="./OutputImg/img3.png"/>
+<img src="./OutputImg/img4.png"/>
+
 
 ## Folder Structure
 
