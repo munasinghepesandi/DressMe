@@ -20,37 +20,51 @@ const ProductsData = [
 
 const Products = () => {
     return (
-        <div className="mt-20 mb-16">
-            <div className="max-w-7xl mx-auto px-4">
-                <div className="text-center mb-12 max-w-2xl mx-auto">
-                    <h1 className="text-blue-600 font-bold tracking-widest uppercase text-3xl ">Top Selling Products for you</h1>
-                    <p className="text-lg text-gray-400">Discover our bestsellers and new arrivals</p>
+        <section id="products" className="mx-auto mb-14 mt-14 max-w-7xl px-4 md:mt-16">
+            <div className="mb-8 flex flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">
+                <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-700">Most Wanted</p>
+                    <h2 className="font-display text-3xl text-slate-900 md:text-5xl">Top Selling Products</h2>
+                    <p className="mt-1 text-sm text-slate-600 md:mt-2 md:text-base">Sleek, versatile picks that never stay in stock for long.</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-                    {ProductsData.map((product) => (
-                        <div
-                            key={product.id}
-                            className="bg-white rounded-3xl shadow-2xl p-4 sm:p-6 flex flex-col items-center hover:scale-105 hover:shadow-blue-100 transition-all duration-300 border border-blue-100 group w-full max-w-xs mx-auto"
-                        >
-                            <img
-                                src={product.image}
-                                alt={product.name}
-                                className="w-full h-50 object-cover rounded-xl mb-6 shadow-lg group-hover:ring-4 group-hover:ring-blue-100 transition-all duration-300"
-                            />
-                            <h3 className="text-lg font-bold text-blue-900  group-hover:text-blue-400 transition-colors duration-200">{product.name}</h3>
-                            {/* Rating */}
-                            <div className="flex items-center ">
-                                <span className="text-blue-400 font-bold">{product.price}</span>
-                            </div>
-                            <div className="flex flex-col sm:flex-row sm:gap-4 mt-4 w-full">
-                                <button className="flex-1 bg-blue-400 hover:bg-blue-500 text-white px-6  rounded-xl font-bold shadow-md transition-all duration-200 hover:scale-105">Buy Now</button>
-                                <button className="flex-1 bg-gray-400 hover:bg-blue-100 text-white px-6  font-semibold rounded-xl transition-all duration-200 hover:scale-105">Add to Cart</button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+
+                <a href="#" className="w-fit rounded-full border border-slate-300 bg-white/70 px-5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-700 transition hover:bg-white">
+                    View All
+                </a>
             </div>
-        </div>
+
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {ProductsData.map((product) => (
+                        <article
+                            key={product.id}
+                            className="group glass-panel reveal-up overflow-hidden rounded-[1.5rem] border p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_30px_rgba(26,34,56,0.16)]"
+                        >
+                            <div className="relative">
+                                <img
+                                    src={product.image}
+                                    alt={product.name}
+                                    className="h-56 w-full rounded-2xl object-cover transition duration-300 group-hover:scale-[1.02]"
+                                />
+                                <span className="absolute left-3 top-3 rounded-full bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-700">
+                                    Trending
+                                </span>
+                            </div>
+
+                            <div className="mt-4 flex items-start justify-between gap-3">
+                                <h3 className="text-base font-bold text-slate-900">{product.name}</h3>
+                                <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-extrabold text-blue-700">{product.price}</span>
+                            </div>
+
+                            <p className="mt-2 text-sm text-slate-600">Tailored fit, premium comfort, and all-day style confidence.</p>
+
+                            <div className="mt-5 flex flex-col gap-2 sm:flex-row">
+                                <button className="btn-primary flex-1 rounded-xl px-3 py-2 text-xs font-bold uppercase tracking-wider transition-all">Buy Now</button>
+                                <button className="btn-ghost flex-1 rounded-xl px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-700 transition-all hover:bg-white">Add to Cart</button>
+                            </div>
+                        </article>
+                    ))}
+            </div>
+        </section>
     );
 };
 

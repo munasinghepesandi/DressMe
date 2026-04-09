@@ -2,88 +2,110 @@ import Logo from "../assets/lg.png";
 import Search from "../assets/search.png";
 import Cart from "../assets/carticon.png";
 import { Link } from "react-router-dom";
-// Placeholder avatar
+import { useState } from "react";
+
 const avatar = "https://ui-avatars.com/api/?name=User&background=blue&color=fff&size=64";
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const navLinks = [
+        { to: "/", label: "Home" },
+        { to: "#", label: "Men" },
+        { to: "#", label: "Women" },
+        { to: "#", label: "Kids" },
+        { to: "#", label: "Top Rated" },
+        { to: "#", label: "Sale" },
+        { to: "/About", label: "About" },
+        { to: "/Contact", label: "Contact" },
+    ];
+
     return (
-        <header className="shadow bg-white w-full">
-            <div className="max-w-7xl mx-auto flex flex-col px-4 py-3">
-                {/* Top Row: Logo, Search, User, Cart */}
-                <div className="w-full flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-                    <div className="flex items-center gap-3 justify-between md:justify-start">
-                        <a href="#" className="font-extrabold text-2xl text-blue-400 flex items-center gap-2 tracking-tight">
-                            <img src={Logo} alt="Logo" className="w-10" />
-                            DRESS ME
-                        </a>
+        <header className="sticky top-0 z-40 px-3 pt-3 md:px-6">
+            <div className="glass-panel mx-auto max-w-7xl rounded-3xl px-4 py-4 shadow-[0_16px_34px_rgba(26,34,56,0.12)] md:px-6">
+                <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                    <div className="flex items-center justify-between gap-3">
+                        <Link to="/" className="flex items-center gap-3 tracking-wide">
+                            <img src={Logo} alt="Logo" className="w-10 rounded-full ring-2 ring-blue-100" />
+                            <div>
+                                <p className="font-display text-2xl leading-none text-slate-900 md:text-3xl">Dress Me</p>
+                                <p className="text-[10px] uppercase tracking-[0.3em] text-slate-500 md:text-xs">Runway Everyday</p>
+                            </div>
+                        </Link>
+
+                        <button
+                            type="button"
+                            className="rounded-xl border border-slate-300 bg-white/80 px-3 py-2 text-xs font-bold uppercase tracking-wider text-slate-700 md:hidden"
+                            onClick={() => setIsMenuOpen((value) => !value)}
+                            aria-expanded={isMenuOpen}
+                            aria-controls="mobile-nav"
+                        >
+                            {isMenuOpen ? "Close" : "Menu"}
+                        </button>
                     </div>
-                    {/* Prominent Search Bar */}
-                    <div className="flex-1 flex justify-center md:justify-center my-2 md:my-0">
-                        <div className="relative w-full max-w-md">
-                            <input type="text" placeholder="Search for products, brands..." className="w-full pl-12 pr-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:border-blue-400 bg-gray-50 shadow-inner text-gray-700 text-lg" />
-                            <img src={Search} className="w-5 h-5 text-gray-400 absolute top-1/2 left-4 -translate-y-1/2" />
-                        </div>
+
+                    <div className="relative w-full md:max-w-lg">
+                        <img src={Search} alt="Search" className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 opacity-70" />
+                        <input
+                            type="text"
+                            placeholder="Search collections, brands, looks..."
+                            className="w-full rounded-full border border-slate-300/70 bg-white/80 py-2.5 pl-12 pr-4 text-sm text-slate-700 shadow-inner outline-none transition focus:border-blue-400"
+                        />
                     </div>
-                    {/* User and Cart */}
-                    <div className="flex items-center gap-4 justify-end">
-                        {/* User Avatar */}
+
+                    <div className="hidden items-center justify-end gap-3 md:flex">
                         <div className="relative group">
-                            <img src={avatar} alt="User" className="w-10 h-10 rounded-full border-2 border-blue-200 shadow cursor-pointer" />
-                            <div className="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-lg py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Profile</a>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Orders</a>
-                                <Link to="/SignIn" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Sign In</Link>
+                            <img src={avatar} alt="User" className="h-10 w-10 cursor-pointer rounded-full border-2 border-blue-200 shadow" />
+                            <div className="absolute right-0 mt-2 w-40 rounded-xl border border-slate-200 bg-white/95 py-2 opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 z-20">
+                                <a href="#" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50">Profile</a>
+                                <a href="#" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50">Orders</a>
+                                <Link to="/SignIn" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50">Sign In</Link>
                             </div>
                         </div>
-                        {/* Cart Icon with Badge */}
+
                         <div className="relative">
-                            <button className="bg-blue-400 text-white rounded-full p-2 flex items-center shadow hover:bg-blue-500 transition-all duration-200">
+                            <button className="rounded-full border border-slate-200 bg-white p-2 shadow hover:scale-[1.03] transition-transform">
                                 <img src={Cart} alt="Cart" className="w-6 h-6" />
                             </button>
-                            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-0.5 shadow">2</span>
+                            <span className="absolute -right-2 -top-2 rounded-full bg-orange-500 px-2 py-0.5 text-xs font-bold text-white shadow">2</span>
                         </div>
                     </div>
                 </div>
-                {/* Divider line between header and navbar */}
-                <hr className="w-full border-t border-gray-200 my-2" />
-                {/* Navbar with dropdowns and categories */}
-                <nav className="w-full flex justify-center mt-0">
-                    <ul className="flex items-center gap-6 text-lg font-semibold">
-                        <Link to="/">
-                            <li className="inline-block px-3 py-2 rounded hover:bg-blue-100 hover:text-blue-500 text-gray-700 transition-all duration-150 cursor-pointer">Home</li>
-                        </Link>
-                        <li className="relative group inline-block px-3 py-2 rounded hover:bg-blue-100 hover:text-blue-500 text-gray-700 transition-all duration-150 cursor-pointer">
-                            Men
-                            <div className="absolute left-0 mt-2 w-40 bg-white rounded-xl shadow-lg py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">T-Shirts</a>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Shirts</a>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Pants</a>
-                            </div>
+
+                <hr className="my-3 border-t border-slate-200" />
+
+                <nav id="mobile-nav" className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
+                    <ul className="grid gap-2 md:flex md:min-w-max md:items-center md:gap-5 md:overflow-x-auto md:text-base text-sm font-semibold text-slate-700">
+                        {navLinks.map((link) => (
+                            <li key={link.label}>
+                                {link.to === "#" ? (
+                                    <a
+                                        href="#"
+                                        className="block rounded-full px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition"
+                                    >
+                                        {link.label}
+                                    </a>
+                                ) : (
+                                    <Link
+                                        to={link.to}
+                                        className="block rounded-full px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition"
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                )}
+                            </li>
+                        ))}
+
+                        <li className="mt-1 flex items-center gap-2 md:hidden">
+                            <Link to="/SignIn" className="btn-ghost flex-1 rounded-xl px-3 py-2 text-center text-xs font-bold uppercase tracking-widest text-slate-700">
+                                Sign In
+                            </Link>
+                            <button className="relative rounded-xl border border-slate-200 bg-white px-3 py-2 shadow">
+                                <img src={Cart} alt="Cart" className="w-5 h-5" />
+                                <span className="absolute -right-2 -top-2 rounded-full bg-orange-500 px-1.5 py-0.5 text-[10px] font-bold text-white shadow">2</span>
+                            </button>
                         </li>
-                        <li className="relative group inline-block px-3 py-2 rounded hover:bg-blue-100 hover:text-blue-500 text-gray-700 transition-all duration-150 cursor-pointer">
-                            Women
-                            <div className="absolute left-0 mt-2 w-40 bg-white rounded-xl shadow-lg py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Dresses</a>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Tops</a>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Skirts</a>
-                            </div>
-                        </li>
-                        <li className="relative group inline-block px-3 py-2 rounded hover:bg-blue-100 hover:text-blue-500 text-gray-700 transition-all duration-150 cursor-pointer">
-                            Kids
-                            <div className="absolute left-0 mt-2 w-40 bg-white rounded-xl shadow-lg py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Boys</a>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Girls</a>
-                                <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-blue-50">Infants</a>
-                            </div>
-                        </li>
-                        <li className="inline-block px-3 py-2 rounded hover:bg-blue-100 hover:text-blue-500 text-gray-700 transition-all duration-150 cursor-pointer">Top Rated</li>
-                        <li className="inline-block px-3 py-2 rounded hover:bg-blue-100 hover:text-blue-500 text-gray-700 transition-all duration-150 cursor-pointer">Sale</li>
-                        <Link to="/About">
-                            <li className="inline-block px-3 py-2 rounded hover:bg-blue-100 hover:text-blue-500 text-gray-700 transition-all duration-150 cursor-pointer">About</li>
-                        </Link>
-                        <Link to="/Contact">
-                            <li className="inline-block px-3 py-2 rounded hover:bg-blue-100 hover:text-blue-500 text-gray-700 transition-all duration-150 cursor-pointer">Contact</li>
-                        </Link>
                     </ul>
                 </nav>
             </div>

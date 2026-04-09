@@ -1,4 +1,3 @@
-
 import img1 from "../assets/cover.png";
 import img5 from "../assets/img5.avif";
 import img7 from "../assets/img7.webp";
@@ -10,61 +9,101 @@ import Footer from "../Footer/Footer";
 
 const Home = () => {
     return (
-        <div className="bg-blue-50 min-h-screen">
+        <div className="min-h-screen pb-10">
             <Header />
-            {/* Hero Section */}
-            <section className="w-full flex flex-col md:flex-row items-center justify-between px-6 py-20 max-w-7xl mx-auto gap-12">
-                <div className="flex-1 flex flex-col gap-8 animate-slide-up rounded-3xl p-8">
-                    <h1 className="text-6xl md:text-7xl font-black text-blue-500 leading-tight tracking-tight mb-4">
-                        Elevate Your Style<br />
-                        <span className="text-gray-700">with <span className="text-blue-400">Dress Me</span></span>
-                    </h1>
-                    <p className="text-2xl text-gray-500 max-w-xl font-medium mb-6">
-                        Discover premium fashion for every occasion. Shop the latest collections for men, women, and kids. Enjoy exclusive offers and new arrivals every week.
-                    </p>
-                    <a href="#collections" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold px-12 py-4 rounded-full shadow-xl transition-all duration-300 text-2xl w-fit ring-2 ring-blue-200 hover:scale-105">Shop New Arrivals</a>
-                </div>
-                <div className="flex-1 flex justify-center mt-8 md:mt-0">
-                    <img src={img1} alt="Fashion Hero" className="h-112 w-full max-w-2xl object-cover" />
-                </div>
-            </section>
 
-            {/* Featured Collections */}
-            <section id="collections" className="max-w-7xl mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="relative group rounded-3xl overflow-hidden shadow-xl border border-blue-100 bg-white">
-                        <img src={img7} alt="Men's Collection" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                        <div className="absolute inset-0 bg-linear-to-t from-gray-600 to-transparent flex flex-col justify-end p-6">
-                            <h2 className="text-3xl font-extrabold text-white mb-25 text-center">Men</h2>
-                            <a href="#" className="inline-block bg-white text-blue-500 font-bold px-6 py-2 rounded-full shadow hover:bg-blue-100 transition-all duration-200">Shop Men</a>
+            <main className="px-3 md:px-8">
+                <section className="bg-mesh reveal-up relative mx-auto mt-4 grid max-w-7xl overflow-hidden rounded-[1.6rem] border border-slate-200/70 px-4 py-8 md:mt-6 md:rounded-[2rem] md:px-10 md:py-14 lg:grid-cols-2">
+                    <div className="relative z-10 flex flex-col gap-6">
+                        <span className="w-fit rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-orange-700 md:px-4 md:text-xs md:tracking-[0.24em]">
+                            New Season 2026
+                        </span>
+                        <h1 className="font-display text-4xl leading-[0.98] text-slate-900 sm:text-5xl md:text-7xl">
+                            Curated Street Luxe
+                            <span className="block text-blue-700">for Every City Moment</span>
+                        </h1>
+                        <p className="max-w-xl text-sm text-slate-600 sm:text-base md:text-lg">
+                            Discover fashion-forward essentials with editorial-level styling. From elevated basics to statement pieces, every drop is designed to move with your lifestyle.
+                        </p>
+                        <div className="flex flex-wrap gap-2 sm:gap-3">
+                            <a href="#collections" className="btn-primary rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] transition-all sm:px-7 sm:py-3 sm:text-sm sm:tracking-widest">
+                                Explore Drop
+                            </a>
+                            <a href="#products" className="btn-ghost rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-[0.2em] text-slate-700 transition-all hover:bg-white sm:px-7 sm:py-3 sm:text-sm sm:tracking-widest">
+                                Shop Bestsellers
+                            </a>
                         </div>
-                    </div>
-                    <div className="relative group rounded-3xl overflow-hidden shadow-xl border border-blue-100 bg-white">
-                        <img src={img5} alt="Women Collection" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                        <div className="absolute inset-0 bg-linear-to-t from-gray-600 to-transparent flex flex-col justify-end p-6">
-                            <h2 className="text-3xl font-extrabold text-white mb-25 text-center">Women</h2>
-                            <a href="#" className="inline-block bg-white text-blue-500 font-bold px-6 py-2 rounded-full shadow hover:bg-blue-100 transition-all duration-200">Shop Women</a>
-                        </div>
-                    </div>
-                    <div className="relative group rounded-3xl overflow-hidden shadow-xl border border-blue-100 bg-white">
-                        <img src={img15} alt="Kids Collection" className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300" />
-                        <div className="absolute inset-0 bg-linear-to-t from-gray-600 to-transparent flex flex-col justify-end p-6">
-                            <h2 className="text-3xl font-extrabold text-white mb-25 text-center">Kids</h2>
-                            <a href="#" className="inline-block bg-white text-blue-500 font-bold px-6 py-2 rounded-full shadow hover:bg-blue-100 transition-all duration-200">Shop Kids</a>
+                        <div className="flex flex-wrap gap-4 pt-1 text-xs text-slate-600 sm:gap-6 sm:pt-3 sm:text-sm">
+                            <p><span className="font-bold text-slate-900">48H</span> express delivery</p>
+                            <p><span className="font-bold text-slate-900">Free</span> styling assistant</p>
+                            <p><span className="font-bold text-slate-900">500+</span> new arrivals</p>
                         </div>
                     </div>
 
-                </div>
-            </section>
+                    <div className="reveal-up stagger-1 relative mt-3 md:mt-0">
+                        <div className="absolute -right-4 -top-4 h-28 w-28 rounded-full bg-blue-200/70 blur-2xl" />
+                        <img
+                            src={img1}
+                            alt="Fashion Hero"
+                            className="h-full max-h-[560px] w-full rounded-[1.6rem] object-cover shadow-[0_20px_40px_rgba(26,34,56,0.18)]"
+                        />
+                    </div>
+                </section>
 
-            {/* Sale Advertisement */}
-            <section className="w-full flex flex-col md:flex-row items-center justify-center gap-8 px-4 py-10 animate-fade-in">
-                <div className="flex items-center gap-4 bg-white rounded-2xl shadow-lg p-6 hover:scale-105 transition-transform border border-blue-100">
-                    <h2 className="text-2xl font-bold text-red-800">Mega Winter Sale!</h2>
-                    <p className="text-lg">Up to <span className="font-extrabold text-red-700">50% OFF</span> on selected items</p>
-                </div>
-                
-            </section>
+                <section id="collections" className="mx-auto mt-10 max-w-7xl md:mt-14">
+                    <div className="mb-6 flex flex-col items-start justify-between gap-3 md:mb-8 md:flex-row md:items-end md:gap-4">
+                        <div>
+                            <h2 className="font-display text-3xl text-slate-900 md:text-5xl">Featured Collections</h2>
+                            <p className="mt-1 text-sm text-slate-600 md:mt-2 md:text-base">Three standout edits built for your weekly rotation.</p>
+                        </div>
+                        <span className="hidden rounded-full border border-slate-300 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600 md:inline-block">
+                            Handpicked
+                        </span>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                        <article className="reveal-up stagger-1 relative overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white/80 shadow-lg">
+                            <img src={img7} alt="Men's Collection" className="h-80 w-full object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
+                            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                                <h3 className="font-display text-4xl text-white">Men</h3>
+                                <a href="#" className="rounded-full bg-white px-4 py-2 text-sm font-bold uppercase tracking-wider text-slate-900">Shop</a>
+                            </div>
+                        </article>
+
+                        <article className="reveal-up stagger-2 relative overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white/80 shadow-lg">
+                            <img src={img5} alt="Women Collection" className="h-80 w-full object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
+                            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                                <h3 className="font-display text-4xl text-white">Women</h3>
+                                <a href="#" className="rounded-full bg-white px-4 py-2 text-sm font-bold uppercase tracking-wider text-slate-900">Shop</a>
+                            </div>
+                        </article>
+
+                        <article className="reveal-up stagger-3 relative overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white/80 shadow-lg">
+                            <img src={img15} alt="Kids Collection" className="h-80 w-full object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
+                            <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
+                                <h3 className="font-display text-4xl text-white">Kids</h3>
+                                <a href="#" className="rounded-full bg-white px-4 py-2 text-sm font-bold uppercase tracking-wider text-slate-900">Shop</a>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section className="mx-auto mt-12 max-w-7xl">
+                    <div className="reveal-up glass-panel flex flex-col items-start justify-between gap-5 rounded-[1.8rem] border px-6 py-7 md:flex-row md:items-center md:px-10">
+                        <div>
+                            <p className="text-xs font-bold uppercase tracking-[0.3em] text-orange-600">Limited Time</p>
+                            <h2 className="font-display mt-2 text-4xl text-slate-900 md:text-5xl">Mega Winter Sale</h2>
+                            <p className="mt-1 text-slate-600">Enjoy up to <span className="font-bold text-orange-600">50% off</span> on selected signature pieces.</p>
+                        </div>
+                        <a href="#products" className="btn-primary rounded-full px-7 py-3 text-sm font-bold uppercase tracking-wider transition-all">
+                            Claim Offers
+                        </a>
+                    </div>
+                </section>
+            </main>
 
             <Products />
             <About />

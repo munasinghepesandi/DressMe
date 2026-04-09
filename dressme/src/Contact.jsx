@@ -2,38 +2,50 @@ import Header from "./Header/Head";
 
 const Contact = () => {
     return (
-        <div>
+        <div className="min-h-screen px-4 pb-10">
             <Header />
-            <div className="min-h-screen flex items-center justify-center bg-blue-50 py-12 px-4">
-                <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
-                    <h2 className="text-3xl font-bold text-blue-400 mb-2">Contact Us</h2>
-                    <p className="text-gray-400 mb-6">We would love to hear from you! Please fill out the form below to get in touch.</p>
-                    <form className="w-full flex flex-col gap-4">
+            <div className="mx-auto mt-8 max-w-6xl">
+                <div className="grid gap-6 md:grid-cols-2">
+                    <div className="glass-panel reveal-up rounded-[1.8rem] border p-6 md:p-9">
+                        <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-700">Let's Connect</p>
+                        <h2 className="font-display mt-3 text-4xl text-slate-900 md:text-5xl">Contact Us</h2>
+                        <p className="mt-3 text-sm text-slate-600 md:mt-4 md:text-base">
+                            Have a question about your order, fit, or style recommendations? Our team is here to help you anytime.
+                        </p>
+                        <div className="mt-7 space-y-2 text-sm text-slate-700">
+                            <p><span className="font-semibold">Phone:</span> +94 112 123 4567</p>
+                            <p><span className="font-semibold">Email:</span> dressme@dress.lk</p>
+                            <p><span className="font-semibold">Hours:</span> Mon - Sat, 9:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div className="glass-panel reveal-up stagger-1 rounded-[1.8rem] border p-6 md:p-9">
+                        <form className="flex w-full flex-col gap-4">
                         <div>
-                            <label htmlFor="name" className="block text-gray-700 mb-1">Name</label>
+                            <label htmlFor="name" className="mb-1 block text-sm font-semibold text-slate-700">Name</label>
                             <input
                                 type="text"
                                 id="name"
-                                className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400"
+                                className="w-full rounded-xl border border-slate-300/80 bg-white/80 px-4 py-2.5 text-slate-700 outline-none transition focus:border-blue-400"
                                 placeholder="Enter your name"
                                 required
                             />
                         </div>
                         <div>
-                            <label htmlFor="email" className="block text-gray-700 mb-1">Email</label>
+                            <label htmlFor="email" className="mb-1 block text-sm font-semibold text-slate-700">Email</label>
                             <input
                                 type="email"
                                 id="email"
-                                className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400"
+                                className="w-full rounded-xl border border-slate-300/80 bg-white/80 px-4 py-2.5 text-slate-700 outline-none transition focus:border-blue-400"
                                 placeholder="Enter your email"
                                 required
                             />
                         </div>
                         <div>
-                            <label htmlFor="message" className="block text-gray-700 mb-1">Message</label>
+                            <label htmlFor="message" className="mb-1 block text-sm font-semibold text-slate-700">Message</label>
                             <textarea
                                 id="message"
-                                className="w-full px-4 py-2 border border-gray-400 rounded-lg focus:outline-none focus:border-blue-400"
+                                className="w-full rounded-xl border border-slate-300/80 bg-white/80 px-4 py-2.5 text-slate-700 outline-none transition focus:border-blue-400"
                                 placeholder="Enter your message"
                                 rows="4"
                                 required
@@ -41,11 +53,12 @@ const Contact = () => {
                         </div>
                         <button
                             type="submit"
-                            className="w-full bg-blue-400 hover:bg-blue-500 text-white font-semibold py-2 rounded-lg transition-all duration-200 mt-2"
+                            className="btn-primary mt-2 w-full rounded-xl py-2.5 text-sm font-bold uppercase tracking-widest transition-all"
                         >
                             Send Message
                         </button>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>

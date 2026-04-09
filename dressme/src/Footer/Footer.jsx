@@ -1,15 +1,36 @@
 
 const Footer = () => {
     return (
-        <footer className="bg-blue-300 py-10 mt-20 w-full shadow-inner">
-            <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-                <div className="mb-4 md:mb-0 text-center md:text-left">
-                    <h3 className="font-extrabold text-2xl text-blue-900 mb-1">Dress Me</h3>
-                    <p className="text-gray-700">&copy; {new Date().getFullYear()} P&M Technologies. All rights reserved.</p>
+        <footer className="mx-auto mt-16 max-w-7xl px-4 pb-8">
+            <div className="glass-panel rounded-[1.8rem] border px-6 py-8 md:px-10 md:py-10">
+                <div className="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 className="font-display text-4xl text-slate-900">Dress Me</h3>
+                        <p className="mt-2 max-w-sm text-sm leading-relaxed text-slate-600">
+                            Luxury-inspired essentials for modern wardrobes. Built for quality, designed for confidence.
+                        </p>
+                    </div>
+
+                    <div>
+                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Support</p>
+                        <ul className="mt-3 space-y-2 text-sm text-slate-700">
+                            <li>Shipping and Returns</li>
+                            <li>Order Tracking</li>
+                            <li>Size Guide</li>
+                        </ul>
+                    </div>
+
+                    <div className="text-left md:text-right">
+                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Contact</p>
+                        <p className="mt-3 text-sm text-slate-700">+94 112 123 4567</p>
+                        <p className="text-sm text-slate-700">
+                            <a href="mailto:dressme@dress.lk" className="font-semibold text-blue-700 hover:underline">dressme@dress.lk</a>
+                        </p>
+                    </div>
                 </div>
-                <div className="text-center md:text-right">
-                    <p className="mb-1">Contact: <span className="font-semibold text-blue-800">+94 112 123 4567</span></p>
-                    <p>Email: <a href="mailto:dressme@dress.lk" className="text-blue-800 hover:underline font-semibold">dressme@dress.lk</a></p>
+
+                <div className="mt-7 border-t border-slate-200 pt-5 text-center text-sm text-slate-500 md:text-left">
+                    &copy; {new Date().getFullYear()} P&M Technologies. All rights reserved.
                 </div>
             </div>
         </footer>
