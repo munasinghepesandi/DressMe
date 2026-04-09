@@ -12,8 +12,8 @@ const Home = () => {
         <div className="min-h-screen pb-10">
             <Header />
 
-            <main className="px-3 md:px-8">
-                <section className="bg-mesh reveal-up relative mx-auto mt-4 grid max-w-7xl overflow-hidden rounded-[1.6rem] border border-slate-200/70 px-4 py-8 md:mt-6 md:rounded-[2rem] md:px-10 md:py-14 lg:grid-cols-2">
+            <main className="px-0">
+                <section className="bg-mesh reveal-up relative mt-0 grid w-full overflow-hidden rounded-none border-y border-slate-200/70 px-4 py-8 md:mt-0 md:px-10 md:py-14 lg:grid-cols-2 lg:px-14">
                     <div className="relative z-10 flex flex-col gap-6">
                         <span className="w-fit rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-orange-700 md:px-4 md:text-xs md:tracking-[0.24em]">
                             New Season 2026
@@ -50,7 +50,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section id="collections" className="mx-auto mt-10 max-w-7xl md:mt-14">
+                <section id="collections" className="mt-10 w-full px-4 md:mt-14 md:px-10 lg:px-14">
                     <div className="mb-6 flex flex-col items-start justify-between gap-3 md:mb-8 md:flex-row md:items-end md:gap-4">
                         <div>
                             <h2 className="font-display text-3xl text-slate-900 md:text-5xl">Featured Collections</h2>
@@ -91,7 +91,7 @@ const Home = () => {
                     </div>
                 </section>
 
-                <section className="mx-auto mt-12 max-w-7xl">
+                <section className="mt-12 w-full px-4 md:px-10 lg:px-14">
                     <div className="reveal-up glass-panel flex flex-col items-start justify-between gap-5 rounded-[1.8rem] border px-6 py-7 md:flex-row md:items-center md:px-10">
                         <div>
                             <p className="text-xs font-bold uppercase tracking-[0.3em] text-orange-600">Limited Time</p>

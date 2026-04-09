@@ -21,8 +21,8 @@ const Header = () => {
     ];
 
     return (
-        <header className="sticky top-0 z-40 px-3 pt-3 md:px-6">
-            <div className="glass-panel mx-auto max-w-7xl rounded-3xl px-4 py-4 shadow-[0_16px_34px_rgba(26,34,56,0.12)] md:px-6">
+        <header className="sticky top-0 z-40 px-0 pt-0">
+            <div className="glass-panel w-full rounded-none px-4 py-4 shadow-[0_16px_34px_rgba(26,34,56,0.12)] md:px-8">
                 <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                     <div className="flex items-center justify-between gap-3">
                         <Link to="/" className="flex items-center gap-3 tracking-wide">

@@ -20,7 +20,7 @@ const ProductsData = [
 
 const Products = () => {
     return (
-        <section id="products" className="mx-auto mb-14 mt-14 max-w-7xl px-4 md:mt-16">
+        <section id="products" className="mb-14 mt-14 w-full px-4 md:mt-16 md:px-10 lg:px-14">
             <div className="mb-8 flex flex-col gap-3 md:mb-10 md:flex-row md:items-end md:justify-between">
                 <div>
                     <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-700">Most Wanted</p>

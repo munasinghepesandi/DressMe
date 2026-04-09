@@ -1,6 +1,6 @@
 export const About = () => {
     return (
-        <section className="mx-auto mt-14 max-w-7xl px-4">
+        <section className="mt-14 w-full px-4 md:px-10 lg:px-14">
             <div className="glass-panel reveal-up rounded-[1.8rem] border p-8 md:p-10">
                 <div className="grid gap-8 md:grid-cols-[1.4fr_1fr]">
                     <div>

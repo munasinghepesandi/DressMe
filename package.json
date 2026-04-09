@@ -1,0 +1,9 @@
+{
+  "name": "dressme-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm --prefix dressme run build",
+    "dev": "npm --prefix dressme run dev"
+  }
+}

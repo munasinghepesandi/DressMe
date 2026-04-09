@@ -4,7 +4,7 @@ const Contact = () => {
     return (
         <div className="min-h-screen px-4 pb-10">
             <Header />
-            <div className="mx-auto mt-8 max-w-6xl">
+            <div className="mt-8 w-full px-0 md:px-6 lg:px-10">
                 <div className="grid gap-6 md:grid-cols-2">
                     <div className="glass-panel reveal-up rounded-[1.8rem] border p-6 md:p-9">
                         <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-700">Let's Connect</p>

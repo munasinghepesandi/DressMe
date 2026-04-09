@@ -5,8 +5,8 @@ const SignIn = () => {
     return (
         <div className="min-h-screen px-4 pb-10">
             <Header />
-            <div className="mx-auto mt-8 flex max-w-xl items-center justify-center">
-                <div className="glass-panel reveal-up w-full rounded-[1.8rem] border p-8 shadow-[0_18px_32px_rgba(26,34,56,0.14)]">
+            <div className="mt-8 flex w-full items-center justify-center px-0 md:px-6 lg:px-10">
+                <div className="glass-panel reveal-up w-full max-w-3xl rounded-[1.8rem] border p-8 shadow-[0_18px_32px_rgba(26,34,56,0.14)]">
                     <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-700">Welcome Back</p>
                     <h2 className="font-display mt-2 text-4xl text-slate-900 md:text-5xl">Sign In</h2>
                     <p className="mb-6 mt-2 text-sm text-slate-600 md:text-base">Access your account to continue shopping your curated picks.</p>
