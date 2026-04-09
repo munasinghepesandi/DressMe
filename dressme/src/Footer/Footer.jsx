@@ -5,7 +5,7 @@ const Footer = () => {
             <div className="glass-panel rounded-[1.8rem] border px-6 py-8 md:px-10 md:py-10">
                 <div className="grid gap-8 md:grid-cols-3">
                     <div>
-                        <h3 className="font-display text-4xl text-slate-900">Dress Me</h3>
+                        <h3 className="font-display text-3xl text-slate-900 md:text-4xl">Dress Me</h3>
                         <p className="mt-2 max-w-sm text-sm leading-relaxed text-slate-600">
                             Luxury-inspired essentials for modern wardrobes. Built for quality, designed for confidence.
                         </p>

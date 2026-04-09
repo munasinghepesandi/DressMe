@@ -13,7 +13,7 @@ const Home = () => {
             <Header />
 
             <main className="px-0">
-                <section className="bg-mesh reveal-up relative mt-0 grid w-full overflow-hidden rounded-none border-y border-slate-200/70 px-4 py-8 md:mt-0 md:px-10 md:py-14 lg:grid-cols-2 lg:px-14">
+                <section className="bg-mesh reveal-up relative mt-0 grid w-full overflow-hidden rounded-none border-y border-slate-200/70 px-4 py-8 md:mt-0 md:px-10 md:py-14 lg:grid-cols-2 lg:gap-10 lg:px-14">
                     <div className="relative z-10 flex flex-col gap-6">
                         <span className="w-fit rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-orange-700 md:px-4 md:text-xs md:tracking-[0.24em]">
                             New Season 2026
@@ -45,7 +45,7 @@ const Home = () => {
                         <img
                             src={img1}
                             alt="Fashion Hero"
-                            className="h-full max-h-[560px] w-full rounded-[1.6rem] object-cover shadow-[0_20px_40px_rgba(26,34,56,0.18)]"
+                            className="h-full max-h-[420px] w-full rounded-[1.2rem] object-cover shadow-[0_20px_40px_rgba(26,34,56,0.18)] sm:max-h-[520px] md:rounded-[1.6rem]"
                         />
                     </div>
                 </section>
@@ -63,28 +63,28 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                         <article className="reveal-up stagger-1 relative overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white/80 shadow-lg">
-                            <img src={img7} alt="Men's Collection" className="h-80 w-full object-cover" />
+                            <img src={img7} alt="Men's Collection" className="h-64 w-full object-cover sm:h-80" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-                                <h3 className="font-display text-4xl text-white">Men</h3>
+                                <h3 className="font-display text-3xl text-white sm:text-4xl">Men</h3>
                                 <a href="#" className="rounded-full bg-white px-4 py-2 text-sm font-bold uppercase tracking-wider text-slate-900">Shop</a>
                             </div>
                         </article>
 
                         <article className="reveal-up stagger-2 relative overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white/80 shadow-lg">
-                            <img src={img5} alt="Women Collection" className="h-80 w-full object-cover" />
+                            <img src={img5} alt="Women Collection" className="h-64 w-full object-cover sm:h-80" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-                                <h3 className="font-display text-4xl text-white">Women</h3>
+                                <h3 className="font-display text-3xl text-white sm:text-4xl">Women</h3>
                                 <a href="#" className="rounded-full bg-white px-4 py-2 text-sm font-bold uppercase tracking-wider text-slate-900">Shop</a>
                             </div>
                         </article>
 
                         <article className="reveal-up stagger-3 relative overflow-hidden rounded-[1.8rem] border border-slate-200 bg-white/80 shadow-lg">
-                            <img src={img15} alt="Kids Collection" className="h-80 w-full object-cover" />
+                            <img src={img15} alt="Kids Collection" className="h-64 w-full object-cover sm:h-80" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/30 to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
-                                <h3 className="font-display text-4xl text-white">Kids</h3>
+                                <h3 className="font-display text-3xl text-white sm:text-4xl">Kids</h3>
                                 <a href="#" className="rounded-full bg-white px-4 py-2 text-sm font-bold uppercase tracking-wider text-slate-900">Shop</a>
                             </div>
                         </article>

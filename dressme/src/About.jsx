@@ -14,7 +14,7 @@ export const About = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-3 text-center">
+                    <div className="grid grid-cols-1 gap-3 text-center sm:grid-cols-2">
                         <div className="rounded-2xl border border-slate-200 bg-white/70 px-4 py-6">
                             <p className="font-display text-4xl text-slate-900">120k+</p>
                             <p className="text-sm text-slate-600">Happy Customers</p>

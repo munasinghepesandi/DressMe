@@ -3,8 +3,7 @@ import Search from "../assets/search.png";
 import Cart from "../assets/carticon.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
-const avatar = "https://ui-avatars.com/api/?name=User&background=blue&color=fff&size=64";
+import { UserRound } from "lucide-react";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -55,7 +54,13 @@ const Header = () => {
 
                     <div className="hidden items-center justify-end gap-3 md:flex">
                         <div className="relative group">
-                            <img src={avatar} alt="User" className="h-10 w-10 cursor-pointer rounded-full border-2 border-blue-200 shadow" />
+                            <button
+                                type="button"
+                                aria-label="User menu"
+                                className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-blue-200 bg-white text-slate-700 shadow"
+                            >
+                                <UserRound size={18} />
+                            </button>
                             <div className="absolute right-0 mt-2 w-40 rounded-xl border border-slate-200 bg-white/95 py-2 opacity-0 shadow-lg transition-opacity duration-200 group-hover:opacity-100 z-20">
                                 <a href="#" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50">Profile</a>
                                 <a href="#" className="block px-4 py-2 text-sm text-slate-700 hover:bg-blue-50">Orders</a>
@@ -74,8 +79,8 @@ const Header = () => {
 
                 <hr className="my-3 border-t border-slate-200" />
 
-                <nav id="mobile-nav" className={`${isMenuOpen ? "block" : "hidden"} md:block`}>
-                    <ul className="grid gap-2 md:flex md:min-w-max md:items-center md:gap-5 md:overflow-x-auto md:text-base text-sm font-semibold text-slate-700">
+                <nav id="mobile-nav" className={`${isMenuOpen ? "block" : "hidden"} md:flex md:justify-center`}>
+                    <ul className="grid justify-center gap-2 md:flex md:min-w-max md:items-center md:justify-center md:gap-5 md:overflow-x-auto md:text-base text-sm font-semibold text-slate-700">
                         {navLinks.map((link) => (
                             <li key={link.label}>
                                 {link.to === "#" ? (

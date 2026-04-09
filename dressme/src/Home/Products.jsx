@@ -51,8 +51,8 @@ const Products = () => {
                             </div>
 
                             <div className="mt-4 flex items-start justify-between gap-3">
-                                <h3 className="text-base font-bold text-slate-900">{product.name}</h3>
-                                <span className="rounded-full bg-blue-50 px-3 py-1 text-sm font-extrabold text-blue-700">{product.price}</span>
+                                <h3 className="text-sm font-bold text-slate-900 sm:text-base">{product.name}</h3>
+                                <span className="shrink-0 rounded-full bg-blue-50 px-3 py-1 text-xs font-extrabold text-blue-700 sm:text-sm">{product.price}</span>
                             </div>
 
                             <p className="mt-2 text-sm text-slate-600">Tailored fit, premium comfort, and all-day style confidence.</p>
